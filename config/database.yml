@@ -1,7 +1,8 @@
 sqlite: &sqlite
   adapter: sqlite3
-  database: ":memory:"
-  timeout: 500
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
 
 mysql: &mysql
   adapter: mysql
@@ -17,8 +18,11 @@ mysql2: &mysql2
 
 postgresql: &postgresql
   adapter: postgresql
+  host: localhost
+  pool: 5
   database: filterrific_demo_<%= Rails.env %>
   username: postgres
+  password: postgres
   encoding: utf8
 
 defaults: &defaults

@@ -11,3 +11,5 @@ end
 
 require 'wwtd/tasks'
 task default: 'wwtd:local'
+
+require 'sneakers/tasks'

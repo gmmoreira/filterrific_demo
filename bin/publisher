@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+require 'securerandom'
+
+conn = Bunny.new.tap(&:start)
+ch = conn.create_channel
+ex = ch.direct('amq.direct')
+
+$stdin.gets.to_i.times do
+  data = { first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: Faker::Internet.email }
+
+  ex.publish(data.to_json, routing_key: 'student.registered',
+             content_type: 'application/json',
+             app_id: SecureRandom.uuid)
+end
+
+conn.close

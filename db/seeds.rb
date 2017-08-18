@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+['Brazil', 'United States', 'Canada'].map do |coun|
+  { name: coun }
+end.map(&Country.method(:new)).each(&:save)

@@ -15,6 +15,8 @@ gem 'thin'
 gem 'turbolinks'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'sneakers'
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,7 +29,6 @@ gem 'coffee-rails' # specify in default group to avoid autoload warnings on test
 group :development, :test do
   # supported database adapters
   # gem 'pg' # already specified in default group higher up
-  gem 'mysql2', '~> 0.3.18' # http://stackoverflow.com/questions/32457657/rails-4-gemloaderror-specified-mysql2-for-database-adapter-but-the-gem-i
 end
 
 group :development do
