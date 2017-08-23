@@ -17,6 +17,7 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'sneakers'
 gem 'faker'
+gem 'god', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
