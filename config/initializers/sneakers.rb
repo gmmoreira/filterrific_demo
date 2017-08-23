@@ -20,6 +20,6 @@ require 'sneakers/handlers/maxretry'
 # :start_worker_delay => 10     # Delay between thread startup
 
 Sneakers.configure(workers:           2,
-                   timeout_job_after: 10)
+                   timeout_job_after: 2)
 
 Sneakers.logger.level = Logger::INFO

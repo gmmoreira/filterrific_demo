@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require File.expand_path('../../config/environment', __FILE__)
+
+::Rails.application.eager_load!
+
+require 'sneakers'
+require 'sneakers/cli'
+
+Sneakers.server = true
+Sneakers::CLI.start
